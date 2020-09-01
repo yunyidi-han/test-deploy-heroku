@@ -21,7 +21,7 @@ server.get("/movies", (req, res) => {
       `http://www.omdbapi.com/?i=tt3896198&apikey=${process.env.OMDB_API_KEY}`
     )
     .then((result) => {
-      res.send(result);
+      res.send(result.data);
     });
 });
 
